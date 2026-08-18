@@ -1,0 +1,431 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* =========================
+   AUTH
+========================= */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    linear-gradient(
+      135deg,
+      #eef2ff,
+      #f8fafc
+    );
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 20px;
+  padding: 44px 36px;
+  text-align: center;
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4f46e5;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.auth-card h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.subtitle {
+  color: #64748b;
+  margin: 10px 0 30px;
+}
+
+.google-button {
+  width: 100%;
+  border: 1px solid #dbe1ea;
+  background: white;
+  color: #172033;
+  padding: 14px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: 0.2s;
+}
+
+.google-button:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.google-icon {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.auth-note {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 20px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  min-height: 72px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: #4f46e5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.user-email {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.logout-button {
+  border: 1px solid #e2e8f0;
+  background: white;
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #f8fafc;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 55px 24px;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.welcome h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+}
+
+.welcome p {
+  margin: 0;
+  color: #64748b;
+}
+
+.stats {
+  display: flex;
+  gap: 25px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.stat strong {
+  font-size: 22px;
+}
+
+.stat span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =========================
+   TASK FORM
+========================= */
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.task-form input {
+  flex: 1;
+  border: 1px solid #dbe1ea;
+  background: white;
+  border-radius: 10px;
+  padding: 14px 16px;
+  outline: none;
+}
+
+.task-form input:focus {
+  border-color: #6366f1;
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.task-form button {
+  border: 0;
+  border-radius: 10px;
+  padding: 0 22px;
+  background: #4f46e5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.task-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================
+   TASKS
+========================= */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 15px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.task-item:hover {
+  border-color: #cbd5e1;
+}
+
+.check-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+  background: white;
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.completed .check-button {
+  background: #4f46e5;
+  border-color: #4f46e5;
+}
+
+.task-title {
+  flex: 1;
+  font-size: 15px;
+}
+
+.completed .task-title {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.delete-button {
+  border: 0;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.delete-button:hover {
+  color: #ef4444;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border: 1px dashed #dbe1ea;
+  border-radius: 14px;
+}
+
+.empty-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 22px;
+}
+
+.empty-state h3 {
+  margin: 0 0 6px;
+}
+
+.empty-state p {
+  color: #64748b;
+  margin: 0;
+}
+
+.task-loading,
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-screen {
+  min-height: 100vh;
+}
+
+.task-loading {
+  padding: 50px;
+  color: #64748b;
+}
+
+.spinner {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .navbar {
+    padding: 14px 20px;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .container {
+    padding: 35px 18px;
+  }
+
+  .welcome {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+
+  .task-form button {
+    padding: 13px;
+  }
+
+  .stats {
+    gap: 30px;
+  }
+}
